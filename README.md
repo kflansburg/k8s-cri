@@ -1,2 +1,3 @@
 # k8s-cri
-Bindings for Kubernetes CRI
+
+Automatically generated Rust types, clients, and servers from Kubernetes CRI Protobuf spec using `tonic`.

@@ -9,14 +9,6 @@ edition = "2018"
 keywords = ["client", "kubernetes", "k8s", "cri"]
 repository = "https://github.com/kflansburg/k8s-cri"
 readme = "README.md"
-include = [
-	"build.rs",
-	"Cargo.toml",
-	"LICENSE",
-	"README.md",
-	"src/**/*",
-	"proto/**",
-]
 
 [dependencies]
 tonic = { version = "*" }
