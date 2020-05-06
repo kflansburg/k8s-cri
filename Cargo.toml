@@ -1,0 +1,26 @@
+[package]
+name = "k8s-cri"
+version = "0.1.0"
+license = "Apache-2.0"
+authors = ["kflansburg <kevin.flansburg@gmail.com>"]
+categories = ["api-bindings"]
+description = "Bindings Kubernetes CRI"
+edition = "2018"
+keywords = ["client", "kubernetes", "k8s", "cri"]
+repository = "https://github.com/kflansburg/k8s-cri"
+readme = "README.md"
+include = [
+	"build.rs",
+	"Cargo.toml",
+	"LICENSE",
+	"README.md",
+	"src/**/*",
+	"proto/**",
+]
+
+[dependencies]
+tonic = { version = "*" }
+prost = "*"
+
+[build-dependencies]
+tonic-build = { version = "*", features = ["prost"] }
