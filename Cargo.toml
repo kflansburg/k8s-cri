@@ -11,8 +11,8 @@ repository = "https://github.com/kflansburg/k8s-cri"
 readme = "README.md"
 
 [dependencies]
-tonic = { version = "*" }
-prost = "*"
+tonic = "0.2"
+prost = "0.6"
 
 [build-dependencies]
-tonic-build = { version = "*", features = ["prost"] }
+tonic-build = { version = "0.2", features = ["prost"] }
