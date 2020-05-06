@@ -8,11 +8,14 @@ description = "Bindings Kubernetes CRI"
 edition = "2018"
 keywords = ["client", "kubernetes", "k8s", "cri"]
 repository = "https://github.com/kflansburg/k8s-cri"
+documentation = "https://docs.rs/crate/k8s-cri"
 readme = "README.md"
 
 [dependencies]
 tonic = "0.2"
 prost = "0.6"
 
-[build-dependencies]
-tonic-build = { version = "0.2", features = ["prost"] }
+[build-dependencies.tonic-build]
+version = "0.2"
+default-features = false
+features = ["prost"]
