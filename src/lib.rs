@@ -1,6 +1,4 @@
-//! # k8s-cri
-//!
-//! Automatically generated types, clients, and servers from Kubernetes CRI Protobuf definitions.
+//! Automatically generated types, clients, and servers from [Kubernetes CRI Protobuf definitions](https://github.com/kubernetes/cri-api/tree/7d8ade91836419c9dd49d059bda1fe4a7dc283f5/pkg/apis/runtime).
 //!
 //! ## Examples
 //!
@@ -46,6 +44,12 @@
 //! }
 //! ```
 
+pub mod v1 {
+    //! API version v1, [original Protocol Buffers file](https://github.com/kubernetes/cri-api/tree/7d8ade91836419c9dd49d059bda1fe4a7dc283f5/pkg/apis/runtime/v1/api.proto).
+    tonic::include_proto!("runtime.v1");
+}
+
 pub mod v1alpha2 {
+    //! API version v1alpha2, [original Protocol Buffers file](https://github.com/kubernetes/cri-api/tree/7d8ade91836419c9dd49d059bda1fe4a7dc283f5/pkg/apis/runtime/v1alpha2/api.proto).
     tonic::include_proto!("runtime.v1alpha2");
 }
