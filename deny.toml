@@ -74,6 +74,7 @@ allow = [
     "Apache-2.0",
     "ISC",
     "LicenseRef-ring",
+    "BSD-3-Clause",
     #"Apache-2.0 WITH LLVM-exception",
 ]
 # List of explictly disallowed licenses
@@ -100,13 +101,13 @@ default = "deny"
 # The higher the value, the more closely the license text must be to the
 # canonical license text of a valid SPDX license file.
 # [possible values: any between 0.0 and 1.0].
-confidence-threshold = 0.8
+confidence-threshold = 0.93
 # Allow 1 or more licenses on a per-crate basis, so that particular licenses
 # aren't accepted for every possible crate as with the normal allow list
 exceptions = [
     # Each entry is the crate and version constraint, and its specific allow
     # list
-    #{ allow = ["Zlib"], name = "adler32", version = "*" },
+    { allow = ["Unicode-DFS-2016"], name = "unicode-ident" },
 ]
 
 # Some crates don't have (easily) machine readable licensing information,
@@ -134,6 +135,13 @@ name = "ring"
 expression = "LicenseRef-ring"
 license-files = [
     { path = "LICENSE", hash = 0xbd0eed23 },
+]
+
+[[licenses.clarify]]
+name = "webpki"
+expression = "ISC"
+license-files = [
+    { path = "LICENSE", hash = 0x001c7e6c },
 ]
 
 [licenses.private]
