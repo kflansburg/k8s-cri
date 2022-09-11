@@ -13,6 +13,10 @@ jobs:
         with:
           command: fmt
           args: --all -- --check
+      - name: Install protobuf compiler
+        run: |
+          sudo apt-get update
+          sudo apt-get install protobuf-compiler
       - uses: actions-rs/cargo@v1
         with:
           command: build
