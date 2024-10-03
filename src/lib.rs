@@ -32,15 +32,18 @@
 //!
 //! use k8s_cri::v1alpha2::runtime_service_client::RuntimeServiceClient;
 //! use tokio::net::UnixStream;
+//! use hyper_util::rt::TokioIo;
 //! use tonic::transport::{Channel, Endpoint, Uri};
 //! use tower::service_fn;
 //!
 //! #[tokio::main]
 //! async fn main() {
-//!     let path = "/run/containerd/containerd.sock";
 //!     let channel = Endpoint::try_from("http://[::]")
 //!         .unwrap()
-//!         .connect_with_connector(service_fn(move |_: Uri| UnixStream::connect(path)))
+//!         .connect_with_connector(service_fn(|_: Uri| async {
+//!             let path = "/run/containerd/containerd.sock";
+//!             Ok::<_, std::io::Error>(TokioIo::new(UnixStream::connect(path).await?))
+//! }))
 //!         .await
 //!         .expect("Could not create client.");
 //!
