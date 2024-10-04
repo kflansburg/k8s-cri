@@ -23,5 +23,5 @@ features = ["prost", "transport"]
 
 [dev-dependencies]
 tokio = { version = "1.37", features = [ "rt-multi-thread", "macros" ] }
-tower = "0.4"
+tower = "0.5"
 hyper-util = "0.1.9"
