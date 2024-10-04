@@ -12,15 +12,16 @@ documentation = "https://docs.rs/crate/k8s-cri"
 readme = "README.md"
 
 [dependencies]
-tonic = { version = "0.11"}
-prost = "0.12"
+tonic = { version = "0.12"}
+prost = "0.13"
 serde = { version = "1.0", features = ["derive"] }
 
 [build-dependencies.tonic-build]
-version = "0.11"
+version = "0.12"
 default-features = false
 features = ["prost", "transport"]
 
 [dev-dependencies]
 tokio = { version = "1.37", features = [ "rt-multi-thread", "macros" ] }
 tower = "0.4"
+hyper-util = "0.1.9"
