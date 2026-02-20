@@ -51,6 +51,7 @@
 //! }
 //! ```
 
+#[allow(clippy::doc_lazy_continuation)]
 pub mod v1 {
     //! API version v1, [original Protocol Buffers file](https://github.com/kubernetes/cri-api/tree/7d8ade91836419c9dd49d059bda1fe4a7dc283f5/pkg/apis/runtime/v1/api.proto).
     tonic::include_proto!("runtime.v1");
